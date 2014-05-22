@@ -1,4 +1,84 @@
 h1{
   size:4em;
   text-transform:uppercase;
+  width:100%;
+  padding:1em;
+  text-align:center;
+}
+.kickItoff{
+  display:block;
+  position:absolute;
+  left:2em;
+  font-family:sans-serif;
+  font-size:4em;
+  padding:1em;
+  border:0;
+  border-radius:1em;
+  cursor:pointer;
+  width:6em;
+  text-align:center;
+}
+.kickItoff.in{
+  top:2em;
+  background:red;
+}
+.kickItoff.out{
+  top:6em;
+  background:yellow;
+}
+.jez{
+  width:20em;
+  height:40em;
+  margin:0 auto;
+  background:red;
+  background:url("img/raw/jezAsH.jpg");
+  background-size:cover;
+  position:relative;
+}
+.cock{
+  width:3em;
+  height:30em;
+  background:pink;
+  position:absolute;
+  border-radius:4em 4em 0 0;
+  transform:rotate(45deg);
+  top:22em;
+  left:-4em;
+  transition:top, left;
+  transition-duration:.3s;
+  &.suck{
+    top:14em;
+    left:4em;
+  }
+  &:after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    width:.2em;
+    margin-left:-.1em;
+    height:2em;
+    background:darken(pink, 20%);
+  }
+  &:before{
+    content:"";
+    width:9em;
+    height:3em;
+    border-radius:1.5em;
+    position:absolute;
+    bottom:0;
+    background:pink;
+    left:-3em;
+  }
+}
+.jezTop{
+  background:red;
+  background:url("img/raw/jezAsH_top.png");
+  background-size:cover;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:200;
 }
