@@ -36,39 +36,21 @@ h1{
   position:relative;
 }
 .cock{
-  width:3em;
-  height:30em;
-  background:pink;
+  width:8em;
+  height:20em;
+  //background:pink;
   position:absolute;
-  border-radius:4em 4em 0 0;
+  //border-radius:4em 4em 0 0;
   transform:rotate(45deg);
-  top:22em;
+  top:24em;
   left:-4em;
   transition:top, left;
   transition-duration:.3s;
+  background:url('img/raw/cock.png');
+  background-size:cover;
   &.suck{
-    top:14em;
-    left:4em;
-  }
-  &:after{
-    content:"";
-    position:absolute;
-    top:0;
-    left:50%;
-    width:.2em;
-    margin-left:-.1em;
-    height:2em;
-    background:darken(pink, 20%);
-  }
-  &:before{
-    content:"";
-    width:9em;
-    height:5em;
-    border-radius:2.5em;
-    position:absolute;
-    bottom:0;
-    background:pink;
-    left:-3em;
+    top:16em;
+    left:5em;
   }
 }
 .jezTop{
