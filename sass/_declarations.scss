@@ -1,0 +1,90 @@
+// 01. Colours
+// 02. Media Query Mixins
+// 03. Typography etc.
+// 04. Perfect Stays vars
+
+// 01. Colours
+// "The New Defaults"
+$aqua:#7fdbff;
+$blue:#0074d9;
+$navy:#001f3f;
+$teal:#39cccc;
+$green:#2ecc40;
+$olive:#3d9970;
+$lime:#01ff70;
+$yellow:#ffdc00;
+$orange:#ff851b;
+$red:#ff4136;
+$fuchsia:#f012be;
+$purple:#b10dc9;
+$maroon:#85144b;
+$white:#ffffff;
+$silver:#dddddd;
+$grey:#aaaaaa;
+$black:#111111;
+
+// "Imported Theme Colours"
+$black:#000000;
+$white:#ffffff;
+$grey:#f1f1f1;
+$primary:#29abe2;
+$secondary:#ff9624;
+
+// "Perfect Stays" colours
+$greyLight:#eae9e9;
+$greyMid:#484748;
+$greyDark:#292628;
+$greyIcon-a:#58585a;
+$greyIcon-b:#989799;
+$greyText:#777;//#656565;
+$greyFootText:#b0b0b0;
+
+// 02. Media Query Mixins
+@mixin breakpoint($point) {
+  @if $point == upOne {
+    @media (min-width: 1012px) { @content; }
+  }
+  @else if $point == downOne {
+    @media (max-width: 830px) { @content; }
+  }
+  @else if $point == downOneB {
+    @media (max-width: 725px)  { @content; }
+  }
+  @else if $point == downTwo {
+    @media (max-width: 490px)  { @content; }
+  }
+  @else if $point == downThree {
+    @media (max-width: 670px)  { @content; }
+  }
+}
+
+// 03. Typography etc.
+@font-face {
+  font-family: "dwmicons";
+  src:url("fonts/icons/icons.eot");
+  src:url("fonts/icons/icons.eot?#iefix") format("embedded-opentype"),
+      url("fonts/icons/icons.woff") format("woff"),
+      url("fonts/icons/icons.ttf") format("truetype"),
+      url("fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Fonts
+$regular:'Montserrat',serif;
+$condensed:'Roboto Condensed',sans-serif;// 700
+$icons:"dwmicons", $regular;
+$monospace:monospace;
+
+body{letter-spacing:.08em;}
+// Weights
+$book:400;
+$bold:800;
+// Sizes
+html{font-size:100%;
+  //@include breakpoint(downOne) { font-size: 12px; }
+}
+
+// 04. Perfect Stays vars
+$headerHeight:8em;
+$footerHeight:3.8em;
