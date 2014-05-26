@@ -1,73 +1,26 @@
 // 01. Test Alert
-// 02. iScroll
-// 03. Footer Nav actions
+// 02. Suck It!!!
 
 // 01. Test Alert
 //$(document).ready(function(){alert("Main JS Working");});
 
-// 02. iScroll
-var myScroll;
-function loaded () {
-  myScroll = new IScroll('.wrapper', { mouseWheel: true });
+// 02. Suck It!!!
+var cockIn = $('.kickItoff.in');
+var cockOut = $('.kickItoff.out');
+var cock = $('.cock');
+
+function stickItIn(){
+  cock.addClass('suck');
 }
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+function pullItOut(){
+  cock.removeClass('suck');
+}
 
-// 03. Footer Nav actions
 $(document).ready(function(){
-  var footLink = $('.footerLink');
-  var footLinkProp = $('.footerLink.prop');
-  var footLinkNav = $('.footerLink.nav');
-  var footMenuProp = $('.footerMenu.prop');
-  var footMenuNav = $('.footerMenu.nav');
-
-  footLinkProp.on('click',function(){
-    if(footLinkProp.hasClass('current')){
-      footLinkProp.removeClass('current');
-      footMenuProp.removeClass('open');
-    }else{
-      footLink.removeClass('current');
-      footMenuNav.removeClass('open');
-      footLinkProp.addClass('current');
-      footMenuProp.addClass('open');
-    }
+  cockIn.on('click',function(){
+    stickItIn();
   });
-  footLinkNav.on('click',function(){
-    if(footLinkNav.hasClass('current')){
-      footLinkNav.removeClass('current');
-      footMenuNav.removeClass('open');
-    }else{
-      footLink.removeClass('current');
-      footMenuProp.removeClass('open');
-      footLinkNav.addClass('current');
-      footMenuNav.addClass('open');
-    }
+  cockOut.on('click',function(){
+    pullItOut();
   });
 });
-
-// XX. Mark's scripts
-/*
-$(document).ready(function(){
-
-    // Mobile Menu
-    $('.footer-navigation').on('click', function() {
-        var menu = $('.mobile-menu');
-        if (menu.hasClass('show')) {
-            menu.removeClass('show');
-        } else {
-            menu.addClass('show');
-        }
-    });
-
-    // Mobile Menu
-    $('.footer-properties').on('click', function() {
-        var menu = $('.mobile-search');
-        if (menu.hasClass('show')) {
-            menu.removeClass('show');
-        } else {
-            menu.addClass('show');
-        }
-    });
-
-
-});
-//*/
