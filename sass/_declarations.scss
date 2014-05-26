@@ -45,10 +45,7 @@ $greyFootText:#b0b0b0;
     @media (min-width: 1012px) { @content; }
   }
   @else if $point == downOne {
-    @media (max-width: 830px) { @content; }
-  }
-  @else if $point == downOneB {
-    @media (max-width: 725px)  { @content; }
+    @media (max-width: 700px) { @content; }
   }
   @else if $point == downTwo {
     @media (max-width: 490px)  { @content; }
@@ -71,14 +68,13 @@ $greyFootText:#b0b0b0;
 }
 
 // Fonts
-$regular:'Montserrat',serif;
-$condensed:'Roboto Condensed',sans-serif;// 700
+$regular:'Open Sans',sans-serif;// 400, 600, 800
 $icons:"dwmicons", $regular;
 $monospace:monospace;
 
-body{letter-spacing:.08em;}
 // Weights
-$book:400;
+$light:400;
+$book:600;
 $bold:800;
 // Sizes
 html{font-size:100%;

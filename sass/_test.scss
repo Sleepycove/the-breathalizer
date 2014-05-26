@@ -1,31 +1,78 @@
-h1{
-  size:4em;
+
+// basic layout
+body{
+  font-family:$regular;
+  background:$yellow;
+}
+header{
   text-transform:uppercase;
   width:100%;
   padding:1em;
   text-align:center;
+  font-weight:$bold;
+  font-style:italic;
+  h1{
+    font-size:4em;
+    color:$white;
+    text-shadow:darken($yellow,15%) -.1em .1em;
+    @include breakpoint(downTwo){font-size:2em;}
+  }
 }
+.wrapper{
+  width:80%;
+  max-width:40em;
+  margin:0 auto;
+  min-height:40em;
+  .buttons{
+    width:50%;
+    float:left;
+    padding:1em;
+    @include breakpoint(downOne){
+      width:100%;
+      float:none;
+    }
+  }
+  .jezBox{
+    width:50%;
+    height:40em;
+    float:left;
+    @include breakpoint(downOne){
+      width:100%;
+      float:none;
+    }
+  }
+}
+
+// Buttons
 .kickItoff{
   display:block;
-  position:absolute;
-  left:2em;
-  font-family:sans-serif;
-  font-size:4em;
-  padding:1em;
+  width:100%;
+  font-size:2em;
+  text-transform:uppercase;
+  font-weight:$bold;
+  font-style:italic;
+  padding:.5em 0;
   border:0;
-  border-radius:1em;
+  border-radius:.5em;
   cursor:pointer;
-  width:6em;
   text-align:center;
+  color:$white;
+  background:#555;
+  margin:1em 0;
+  position:relative;
+  box-shadow:
+    black 0 .3em 0 0,
+    darken($yellow,15%) .1em .4em 0 0,
+    darken($yellow,15%) .2em .5em 0 0;
+  &:active{
+    top:.1em;
+    box-shadow:
+      black 0 .1em 0 0,
+      darken($yellow,15%) .1em .2em 0 0;
+  }
 }
-.kickItoff.in{
-  top:2em;
-  background:red;
-}
-.kickItoff.out{
-  top:6em;
-  background:yellow;
-}
+
+//
 .jez{
   width:20em;
   height:40em;
@@ -34,6 +81,7 @@ h1{
   background:url("img/raw/jezAsH.jpg");
   background-size:cover;
   position:relative;
+  overflow:hidden;
 }
 .cock{
   width:8em;

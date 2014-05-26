@@ -1,7 +1,6 @@
 {
   "name": "thebreathalizer",
   "version": "0.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,19 +9,23 @@
   "license": "ISC",
   "devDependencies": {
     "gulp-autoprefixer": "0.0.7",
-    "gulp-compass": "^1.1.9",
-    "gulp-concat": "^2.2.0",
+    "gulp-compass": "~1.1.9",
+    "gulp-concat": "~2.2.0",
     "gulp-iconfont": "0.0.11",
     "gulp-iconfont-css": "0.0.9",
-    "gulp-imagemin": "^0.5.0",
-    "gulp-livereload": "^1.5.0",
-    "gulp-minify-css": "^0.3.4",
-    "gulp-rename": "^1.2.0",
-    "gulp-ruby-sass": "^0.5.0",
+    "gulp-imagemin": "~0.5.0",
+    "gulp-livereload": "~1.5.0",
+    "gulp-minify-css": "~0.3.4",
+    "gulp-rename": "~1.2.0",
+    "gulp-ruby-sass": "~0.5.0",
     "gulp-scsslint": "0.0.4",
-    "gulp-svg-sprites": "^0.1.2",
-    "gulp-svgmin": "^0.4.5",
-    "gulp-uglify": "^0.3.0",
+    "gulp-svg-sprites": "~0.1.2",
+    "gulp-svgmin": "~0.4.5",
+    "gulp-uglify": "~0.3.0",
     "tiny-lr": "0.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://tom-hazledine.git.beanstalkapp.com/the-breathalizer.git"
   }
 }
