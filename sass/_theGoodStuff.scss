@@ -3,6 +3,7 @@
 // 03. The Face That Launched a Thousand Ships
 // 04. The top layer of Jez's face
 // 05. The Pink Torpedo
+// 06. Github link
 
 // 01. basic layout
 body{
@@ -140,4 +141,21 @@ header{
     top:16em;
     left:5em;
   }
+}
+
+// 06. Github link
+.github{
+  position:absolute;
+  top:4em;
+  right:-10em;
+  padding:.4em 0;
+  font-style:italic;
+  font-weight:$bold;
+  display:block;
+  background:#555;
+  width:30em;
+  transform:rotate(45deg);
+  text-align:center;
+  color:$white;
+  box-shadow:darken($yellow,15%) 0 .5em 0 0;
 }
