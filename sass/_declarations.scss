@@ -42,7 +42,7 @@ $greyFootText:#b0b0b0;
 // 02. Media Query Mixins
 @mixin breakpoint($point) {
   @if $point == upOne {
-    @media (min-width: 1012px) { @content; }
+    @media (min-width: 920px) { @content; }
   }
   @else if $point == downOne {
     @media (max-width: 700px) { @content; }

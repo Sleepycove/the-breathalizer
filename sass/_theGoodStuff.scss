@@ -10,6 +10,7 @@ body{
   font-family:$regular;
   background:$yellow;
   box-shadow:inset darken($yellow,15%) 0 0 15em 2em;
+  //overflow:hidden;
 }
 header{
   text-transform:uppercase;
@@ -145,17 +146,33 @@ header{
 
 // 06. Github link
 .github{
-  position:absolute;
-  top:4em;
-  right:-10em;
-  padding:.4em 0;
-  font-style:italic;
-  font-weight:$bold;
   display:block;
   background:#555;
-  width:30em;
-  transform:rotate(45deg);
-  text-align:center;
   color:$white;
-  box-shadow:darken($yellow,15%) 0 .5em 0 0;
+  text-align:center;
+  width:20em;
+  margin:0 auto 1em;
+  padding:.4em 0;
+  font-style:italic;
+  font-weight:$book;
+  box-shadow:darken($yellow,15%) .5em .5em 0 0;
+}
+@include breakpoint(upOne){
+  .githubBox{
+    position:absolute;
+    top:0;
+    right:0;
+    display:block;
+    height:14em;
+    width:14em;
+    overflow:hidden;
+  }
+  .github{
+    position:absolute;
+    top:4em;
+    right:-10em;
+    padding:.4em 0;
+    width:30em;
+    transform:rotate(45deg);
+  }
 }
