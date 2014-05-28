@@ -1,5 +1,10 @@
+// 01. basic layout
+// 02. Buttons
+// 03. The Face That Launched a Thousand Ships
+// 04. The top layer of Jez's face
+// 05. The Pink Torpedo
 
-// basic layout
+// 01. basic layout
 body{
   font-family:$regular;
   background:$yellow;
@@ -18,11 +23,13 @@ header{
     @include breakpoint(downTwo){font-size:2em;}
   }
 }
+// The Whole Page
 .wrapper{
   width:80%;
   max-width:40em;
   margin:0 auto;
   min-height:40em;
+  // The "In" and "Out" buttons
   .buttons{
     width:50%;
     float:left;
@@ -32,10 +39,12 @@ header{
       float:none;
     }
   }
+  // The Jez bit
   .jezBox{
     width:50%;
     height:40em;
     float:left;
+    margin-bottom:3em;
     @include breakpoint(downOne){
       width:100%;
       float:none;
@@ -43,23 +52,20 @@ header{
   }
 }
 
-// Buttons
-.kickItoff{
+// 02. Buttons
+@mixin button($background,$color){
+  color:$color;
+  background:$background;
   display:block;
-  width:100%;
-  font-size:2em;
   text-transform:uppercase;
   font-weight:$bold;
   font-style:italic;
+  position:relative;
   padding:.5em 0;
   border:0;
   border-radius:.5em;
-  cursor:pointer;
   text-align:center;
-  color:$white;
-  background:#555;
-  margin:1em 0;
-  position:relative;
+  cursor:pointer;
   box-shadow:
     black 0 .3em 0 0,
     darken($yellow,15%) .1em .4em 0 0,
@@ -71,8 +77,20 @@ header{
       darken($yellow,15%) .1em .2em 0 0;
   }
 }
+.kickItoff{
+  @include button(#555,$white);
+  width:100%;
+  font-size:2em;
+  margin:1em 0;
+}
+.cleanItUp{
+  @include button(#555,$white);
+  width:50%;
+  font-size:1.5em;
+  margin:3em auto;
+}
 
-//
+// 03. The Face That Launched a Thousand Ships
 .jez{
   width:20em;
   height:40em;
@@ -83,24 +101,8 @@ header{
   position:relative;
   overflow:hidden;
 }
-.cock{
-  width:8em;
-  height:20em;
-  //background:pink;
-  position:absolute;
-  //border-radius:4em 4em 0 0;
-  transform:rotate(45deg);
-  top:24em;
-  left:-4em;
-  transition:top, left;
-  transition-duration:.3s;
-  background:url('img/raw/cock.png');
-  background-size:cover;
-  &.suck{
-    top:16em;
-    left:5em;
-  }
-}
+
+// 04. The top layer of Jez's face
 .jezTop{
   background:red;
   background:url("img/raw/jezAsH_top.png");
@@ -111,4 +113,30 @@ header{
   left:0;
   right:0;
   z-index:200;
+}
+
+// 05. The Pink Torpedo
+.cock{
+  width:8em;
+  height:20em;
+  position:absolute;
+  transform:rotate(45deg);
+  top:24em;
+  left:-4em;
+  transition:top, left;
+  transition-duration:.3s;
+  background:url('img/raw/cock.png');
+  background:url('img/raw/lollipop.png');
+  background-size:4em, auto;
+  background-position:top left;
+  background-repeat:no-repeat;
+  //background-size:cover;
+  &.naughty{
+    background:url('img/raw/cock.png');
+    background-size:cover;
+  }
+  &.suck{
+    top:16em;
+    left:5em;
+  }
 }

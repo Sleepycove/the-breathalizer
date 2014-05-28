@@ -7,7 +7,8 @@
 // 02. Suck It!!!
 var cockIn = $('.kickItoff.in');
 var cockOut = $('.kickItoff.out');
-var cock = $('.cock');
+var cock = $('.cock')
+var youKissYourMotherWithThatMouth = $('.cleanItUp');
 
 function stickItIn(){
   cock.addClass('suck');
@@ -22,5 +23,12 @@ $(document).ready(function(){
   });
   cockOut.on('click',function(){
     pullItOut();
+  });
+});
+
+// 03. Granny-safe version
+$(document).ready(function(){
+  youKissYourMotherWithThatMouth.on('click',function(){
+    cock.toggleClass('naughty');
   });
 });
