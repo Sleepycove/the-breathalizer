@@ -4,6 +4,7 @@
 // 04. The top layer of Jez's face
 // 05. The Pink Torpedo
 // 06. Github link
+// 07. Choice box
 
 // 01. basic layout
 body{
@@ -91,6 +92,7 @@ header{
   width:50%;
   font-size:1.5em;
   margin:3em auto;
+  margin-bottom: 1em;
 }
 
 // 03. The Face That Launched a Thousand Ships
@@ -116,6 +118,13 @@ header{
   left:0;
   right:0;
   z-index:200;
+  transition: background;
+  transition-duration:.5s;
+
+  &.eyes {
+    background:url("img/raw/jezAsH_top_eyes.png");
+    background-size: cover;
+  }
 }
 
 // 05. The Pink Torpedo
@@ -134,13 +143,25 @@ header{
   background-position:top left;
   background-repeat:no-repeat;
   //background-size:cover;
+  &.suck{
+    top:16em;
+    left:5em;
+  }
   &.naughty{
     background:url('img/raw/cock.png');
     background-size:cover;
   }
-  &.suck{
-    top:16em;
-    left:5em;
+  &.bbc{
+    background:url('img/raw/bbc.png');
+    background-size:contain;
+    width: 4.5em;
+    height: 19em;
+    transition-duration:.8s;
+
+    &.suck {
+      left: 8.5em;
+      top: 14em;
+    }
   }
 }
 
@@ -174,5 +195,16 @@ header{
     padding:.4em 0;
     width:30em;
     transform:rotate(45deg);
+  }
+}
+
+// 07. Choice box
+
+.chooseYourWeapon {
+  display: none;
+  margin: 0 auto 3em;
+
+  &.show {
+    display: block;
   }
 }
